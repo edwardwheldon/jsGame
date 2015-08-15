@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+	<title>game</title>
+	<link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+	<div class="top">
+		<div class="wrapper">
+				<div class="bankArea">
+					<span class="display_txt" id ="bank"></span>
+				</div><!--end walletArea-->
+		</div><!--end wrapper-->
+	</div><!--end top-->
+
+
+	<div class = "wrapper">
+
+		<div class="cab">
+			<div class="row">
+
+				<div class="displayArea">
+
+					<div class="creditsDisplay">
+						<span id ="credits" class="display_txt">0</span>
+					</div>
+
+					<div class ="scoreDisplay">
+						<span id ="score" class="display_txt">0</span>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="row light-grey">
+
+				<div class="reel_outer">
+
+					<div class="reel">	
+						<span class="reel_txt" id ="val1">?</span>
+					</div>
+					<div class="reel">	
+						<span class="reel_txt" id ="val2">?</span>
+					</div>
+					<div class="reel">	
+						<span class="reel_txt" id ="val3">?</span>
+					</div>
+
+				</div>
+
+			</div><!--end row-->
+
+			<div class="row">
+
+				<div class="nav">
+					<ul>
+						<li><a href="#" onclick="collect();">Collect</a></li>
+						<li><a href="#" onclick="addCredit(1)">INSERT COIN</a></li>
+						<li><a href="#" class="blink" onclick="spin();">SPIN</a></li>
+					</ul>
+				</div>
+
+		</div><!--end cab-->
+
+
+</div><!--end wrapper-->
+
+<script src="scripts/script.js"></script>
+
+</body>
+</html>
