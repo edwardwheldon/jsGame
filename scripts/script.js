@@ -7,7 +7,7 @@ var bank = 10;
 var elem1 = document.getElementById("val1").innerHTML;
 var elem2 = document.getElementById("val2").innerHTML;
 var elem3 = document.getElementById("val3").innerHTML;
-var fruit = ['1','2','3','A','B','C'];
+var fruit = ['1','2','3','A','B','C','T','E','D'];
 var resultTxt = document.getElementById("result");
 
 var beepSound = new Audio("audio/beep.mp3");
@@ -18,11 +18,19 @@ var noSound = new Audio("audio/zang.mp3");
 
 function addCredit(v)
 {
-    beepSound2.play();
-    creditVal = creditVal + v;
-    bank = bank - v;
-    document.getElementById("credits").innerHTML = creditVal;
-    document.getElementById("bank").innerHTML = bank;
+    if (bank > 0)
+    {
+        beepSound2.play();
+        creditVal = creditVal + v;
+        bank = bank - v;
+        document.getElementById("credits").innerHTML = creditVal;
+        document.getElementById("bank").innerHTML = bank;
+    }
+    else
+    {
+        alert("you have no more money in the bank! :(");
+    }
+
 }
 
 function winCredit(v)
