@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 	<title>game</title>
 	<link rel="stylesheet" href="styles/styles.css">
 </head>
@@ -8,8 +9,9 @@
 
 	<div class="top">
 		<div class="wrapper">
-				<div class="bankArea">
-					<span class="display_txt" id ="bank"></span>
+			<h2 class="bankText">Bank:</h2>
+				<div class="bankDisplay">
+					<span class="display_txt">£ <span id ="bank">10</span>
 				</div><!--end walletArea-->
 		</div><!--end wrapper-->
 	</div><!--end top-->
@@ -17,15 +19,17 @@
 
 	<div class = "wrapper">
 
-		<div class="cab">
+		<div class="cabinet">
 			<div class="row">
 
 				<div class="displayArea">
 
+					<h2 class="creditsText">Credits:</h2>
 					<div class="creditsDisplay">
 						<span id ="credits" class="display_txt">0</span>
 					</div>
 
+					<h2 class="scoreText">Score:</h2>
 					<div class ="scoreDisplay">
 						<span id ="score" class="display_txt">0</span>
 					</div>
