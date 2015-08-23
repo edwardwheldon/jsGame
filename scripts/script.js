@@ -7,11 +7,18 @@ var bank = 10;
 var elem1 = document.getElementById("val1").innerHTML;
 var elem2 = document.getElementById("val2").innerHTML;
 var elem3 = document.getElementById("val3").innerHTML;
-var fruit = ['1','2','3','5','6','7','8'];
+var fruit = ['1','2','3','A','B','C'];
 var resultTxt = document.getElementById("result");
+
+var beepSound = new Audio("audio/beep.mp3");
+var beepSound2 = new Audio("audio/beep2.mp3");
+var winSound = new Audio("audio/win.mp3");
+var bigWinSound = new Audio("audio/bigwin.mp3");
+var noSound = new Audio("audio/zang.mp3");
 
 function addCredit(v)
 {
+    beepSound2.play();
     creditVal = creditVal + v;
     bank = bank - v;
     document.getElementById("credits").innerHTML = creditVal;
@@ -33,6 +40,7 @@ function removeBank(v)
 
 function collect()
 {
+    beepSound2.play();
     bank = bank + creditVal;
     creditVal = creditVal - creditVal;
     document.getElementById("bank").innerHTML = bank;
@@ -54,6 +62,7 @@ function addScore(v)
 
 function spin()
 {
+    beepSound2.play();
     if (creditVal > 0)
     {
         removeCredit(1);
@@ -88,8 +97,11 @@ function spin()
         //stop
         setTimeout(function(){
         clearInterval(reel1);
+
         clearInterval(reel2);
+
         clearInterval(reel3);
+        beepSound.play();
         elem1 = document.getElementById("val1").innerHTML;
         elem2 = document.getElementById("val2").innerHTML;
         elem3 = document.getElementById("val3").innerHTML;
@@ -98,6 +110,7 @@ function spin()
     }
     else
     {
+        noSound.play();
         alert("You have 0 credits, please add credits to continue");
     }
     
@@ -109,6 +122,8 @@ function check(a,b,c)
     if (a == b && b == c)
     {
         //resultTxt.innerHTML = "a - b - c";
+        bigWinSound.play();
+        winSound.play();
         alert("matching 3 \n 50 credits awarded! \n 100 points");
         addScore(100);
         winCredit(50);
@@ -117,6 +132,7 @@ function check(a,b,c)
     else if (a == b)
     {
         //resultTxt.innerHTML = "a - b";
+        winSound.play();
         alert("matching 2 \n 5 credits awarded! \n 20 points");
         addScore(20);
         winCredit(5);
@@ -124,6 +140,7 @@ function check(a,b,c)
     else if (b == c)
     {
         //resultTxt.innerHTML = "b - c";
+        winSound.play();
         alert("matching 2 \n 5 credits awarded! \n 20 points");
         addScore(20);
         winCredit(5);
@@ -131,6 +148,7 @@ function check(a,b,c)
     else if (a == c)
     {
         //resultTxt.innerHTML = "a - c";
+        winSound.play();
         alert("matching 2 \n 5 credits awarded! \n 10 points");
         addScore(10);
         winCredit(5);
