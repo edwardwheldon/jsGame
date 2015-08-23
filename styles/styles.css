@@ -180,7 +180,7 @@ h2 {
 
 ul 
 {
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -192,7 +192,7 @@ li
     margin-left:5px;
 }
 
-a:link, a:visited 
+a:link
 {
     display: block;
     width: 150px;
@@ -205,7 +205,21 @@ a:link, a:visited
     text-decoration: none;
     text-transform: uppercase;
     line-height: 60px;
+}
 
+a:visited
+{
+    display: block;
+    width: 150px;
+    height:60px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color: white;
+    background: black;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 60px;
 }
 
 a:hover, a:active {
