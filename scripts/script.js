@@ -132,7 +132,7 @@ function check(a,b,c)
 {
     if (a == b && b == c)
     {
-        feedbackText.innerHTML = "matching 3. 50 credits awarded! 100 points";
+        feedback.innerHTML = "matching 3. 50 credits awarded! 100 points";
         bigWinSound.play();
         winSound.play();
         //alert("matching 3 \n 50 credits awarded! \n 100 points");
@@ -142,7 +142,7 @@ function check(a,b,c)
     }
     else if (a == b)
     {
-        feedbackText.innerHTML = "matching pair. 5 credits awarded! 20 points";
+        feedback.innerHTML = "Matching pair. 5 credits awarded! 20 points";
         winSound.play();
         //alert("matching 2 \n 5 credits awarded! \n 20 points");
         addScore(20);
@@ -150,7 +150,7 @@ function check(a,b,c)
     }
     else if (b == c)
     {
-        feedbackText.innerHTML = "matching pair. 5 credits awarded! 20 points";
+        feedback.innerHTML = "Matching pair. 5 credits awarded! 20 points";
         winSound.play();
         //alert("matching 2 \n 5 credits awarded! \n 20 points");
         addScore(20);
@@ -158,7 +158,7 @@ function check(a,b,c)
     }
     else if (a == c)
     {
-        feedbackText.innerHTML = "matching pair. 5 credits awarded! 10 point";
+        feedback.innerHTML = "Matching pair. 5 credits awarded! 10 point";
         winSound.play();
         //alert("matching 2 \n 5 credits awarded! \n 10 points");
         addScore(10);
