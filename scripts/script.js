@@ -9,6 +9,7 @@ var elem2 = document.getElementById("val2").innerHTML;
 var elem3 = document.getElementById("val3").innerHTML;
 var fruit = ['1','2','3','A','B','C','T','E','D'];
 var resultTxt = document.getElementById("result");
+var feedback = document.getElementById("feedback");
 
 var beepSound = new Audio("audio/beep.mp3");
 var beepSound2 = new Audio("audio/beep2.mp3");
@@ -28,7 +29,8 @@ function addCredit(v)
     }
     else
     {
-        alert("you have no more money in the bank! :(");
+        feedback.innerHTML = "you have no more money in the bank! :(";
+        //alert("you have no more money in the bank! :(");
     }
 
 }
@@ -119,7 +121,8 @@ function spin()
     else
     {
         noSound.play();
-        alert("You have 0 credits, please add credits to continue");
+        feedback.innerHTML = "You have 0 credits, please add credits to continue";
+        //alert("You have 0 credits, please add credits to continue");
     }
     
 }
@@ -129,35 +132,35 @@ function check(a,b,c)
 {
     if (a == b && b == c)
     {
-        //resultTxt.innerHTML = "a - b - c";
+        feedbackText.innerHTML = "matching 3. 50 credits awarded! 100 points";
         bigWinSound.play();
         winSound.play();
-        alert("matching 3 \n 50 credits awarded! \n 100 points");
+        //alert("matching 3 \n 50 credits awarded! \n 100 points");
         addScore(100);
         winCredit(50);
 
     }
     else if (a == b)
     {
-        //resultTxt.innerHTML = "a - b";
+        feedbackText.innerHTML = "matching pair. 5 credits awarded! 20 points";
         winSound.play();
-        alert("matching 2 \n 5 credits awarded! \n 20 points");
+        //alert("matching 2 \n 5 credits awarded! \n 20 points");
         addScore(20);
         winCredit(5);
     }
     else if (b == c)
     {
-        //resultTxt.innerHTML = "b - c";
+        feedbackText.innerHTML = "matching pair. 5 credits awarded! 20 points";
         winSound.play();
-        alert("matching 2 \n 5 credits awarded! \n 20 points");
+        //alert("matching 2 \n 5 credits awarded! \n 20 points");
         addScore(20);
         winCredit(5);
     }
     else if (a == c)
     {
-        //resultTxt.innerHTML = "a - c";
+        feedbackText.innerHTML = "matching pair. 5 credits awarded! 10 point";
         winSound.play();
-        alert("matching 2 \n 5 credits awarded! \n 10 points");
+        //alert("matching 2 \n 5 credits awarded! \n 10 points");
         addScore(10);
         winCredit(5);
     }
