@@ -7,24 +7,24 @@
 </head>
 <body>
 
-	<div class="title">
-		<div class="wrapper">
-			<h1>Ted Vegas</h1>
-		</div><!--end wrapper-->
-	</div><!--end top-->
-
-	<div class="top">
+<div class="title">
 	<div class="wrapper">
- 			<h2 class="bankText">Bank:</h2>
-				<div class="bankDisplay">
-					<span class="display_txt blink">£ <span id ="bank">10</span>
-				</div>
+		<h1>Ted Vegas</h1>
+	</div><!--end wrapper-->
+</div><!--end top-->
 
-			<div class="display_txt marquee blink">
+<div class="top">
+	<div class="wrapper">
+ 		<h2 class="bankText">Bank:</h2>
+		<div class="bankDisplay">
+			<span class="display_txt blink">£ <span id ="bank">10</span>
+		</div>
+
+		<div class="display_txt marquee blink">
 				<span id ="feedback">Good luck</span>
-			</div> 
 		</div> 
-	</div>
+	</div> 
+</div>
 
 <div class="content">
 	<div class = "wrapper">
@@ -67,13 +67,10 @@
 
 			<div class="row">
 
-				<div class="nav">
-					<ul>
-						<li><a href="#" onclick="collect();" class="blink">Collect</a></li>
-						<li><a href="#" onclick="addCredit(1)" class="blink">INSERT COIN</a></li>
-						<li><a href="#" class="blink" onclick="spin();" class="blink">SPIN</a></li>
-					</ul>
-				</div>
+				<button class="btn blink" onclick="collect();">Collect</button>
+				<button class="btn blink" onclick="addCredit(1)">INSERT COIN</button>
+				<button id="btn-spin" class="btn blink" onclick="spin();">SPIN</button>
+			
 			</div>
 
 	</div>
@@ -82,7 +79,7 @@
 
 	
 
-<script src="scripts/script.js"></script>
+<script src="scripts/game.js"></script>
 
 </body>
 </html>

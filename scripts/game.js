@@ -73,9 +73,12 @@ function addScore(v)
 function spin()
 {
     beepSound2.play();
+    var btnspin=document.getElementById("btn-spin");
     if (creditVal > 0)
     {
+
         removeCredit(1);
+        btnspin.disabled = true;
         var rnd1 = Math.floor((Math.random()*fruit.length));
         var rnd2 = Math.floor((Math.random()*fruit.length));
         var rnd3 = Math.floor((Math.random()*fruit.length));
@@ -112,6 +115,7 @@ function spin()
 
         clearInterval(reel3);
         beepSound.play();
+        btnspin.disabled = false;
         elem1 = document.getElementById("val1").innerHTML;
         elem2 = document.getElementById("val2").innerHTML;
         elem3 = document.getElementById("val3").innerHTML;
@@ -124,6 +128,7 @@ function spin()
         feedback.innerHTML = "You have 0 credits, please add credits to continue";
         //alert("You have 0 credits, please add credits to continue");
     }
+
     
 }
 
